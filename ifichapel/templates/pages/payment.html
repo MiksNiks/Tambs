@@ -1,0 +1,64 @@
+{% extends 'pages/index.html' %}
+{% block content %}
+{% load static %}
+
+<title> Payment </title>
+<div class="banner">
+        <h1 class="banner-title">Payment. <br> Please always double check, thank you!. </h1>
+       </div>
+	<form action="" method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+     <section class="about-us">
+    <div class="about">
+      <img src="{% static 'images/notrickroll.jpeg'%}" class="pic2">
+      <div class="text">
+        <h5>Scan the QR To Pay </h5>
+          <p>The website can only currently accept payments from G-Cash</p>
+		  <p>The price is about follows: <br> Baptism: 500₱ <br> Funeral: 1500₱ <br> Marriage: 20,000₱ <br> Blessing: 800₱</p>
+      </div>
+	</div>
+
+		<hr>
+
+<div class="container2">
+
+	  <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Desired Date of Schedule:</label>
+					{{form.desired_date_of_schedule}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Name of Scheduled Person: ( Select only the one you have payed for )</label>
+					<br> <br> 
+					<label>Baptism List</label>
+					{{form.baptismz}}
+					<br> <br>
+					<label>Funeral List</label>
+					{{form.funeralz}}
+					<br> <br>
+					<label>Marriage List</label>
+					{{form.marriagez}}
+					<br> <br>
+					<label>Blessing List</label>
+					{{form.blessingz}}
+					</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Upload Reciept:</label>
+					{{form.upload_receipt}}
+					<br> <br>
+					<input type="submit" name="Submit">
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label> </label>
+					{{form.date_created}}
+				</div> </div>
+
+</div> </section> </form>
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+{% endblock %}

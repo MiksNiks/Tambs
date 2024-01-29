@@ -1,0 +1,73 @@
+{% extends 'pages/index.html' %}
+{% block content %}
+{% load static %}
+
+<title> Baptism  </title>
+	<form action="" method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+
+		<div class="banner">
+        <h1 class="banner-title">Baptism Form. <br> Please only enter correct and truthful information. </h1>
+       </div>
+
+
+<div class="container2">
+	  <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Full Mothers Name:</label>
+					{{form.full_mother_name}}
+				</div> </div>
+
+	 <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Full Fathers Name:</label>
+					{{form.full_father_name}}
+				</div> </div>
+
+	 <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Full Child Name:</label>
+					{{form.full_child_name}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Contact Number:</label>
+					{{form.contact_number}}
+				</div> </div>
+
+	 <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Child's Nationality:</label>
+					{{form.nationality_of_child}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Current Address:</label>
+					{{form.address}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Gender of Child:</label>
+					{{form.gender}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Birth Certificate File:</label>
+					{{form.xerox_copy_birth_certificate}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label></label>
+					{{form.date_created}}
+					<input type="submit" name="Submit">
+				</div> </div>
+
+	<br> <br> <br> <br>
+
+</div>  </form>
+{% endblock %}

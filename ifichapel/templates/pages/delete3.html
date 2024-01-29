@@ -1,0 +1,16 @@
+{% extends 'pages/index.html' %}
+{% block content %}
+{% load static %}
+<title> Funeral </title>
+<div class="container3">
+	<br>
+<center> <h4> Are you sure you want to cancel the Schedule for  {{ funeral }} ? </h4>> </center>
+<br>
+    <button class="button"> <a href ="{% url 'Home' %}"> Cancel </a> </button>
+	<form action="" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+	<button class="button2"> Delete </button>
+	</form>
+</div>
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+{% endblock %}

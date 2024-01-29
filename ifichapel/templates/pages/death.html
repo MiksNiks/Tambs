@@ -1,0 +1,92 @@
+{% extends 'pages/index.html' %}
+{% block content %}
+{% load static %}
+
+<title> Funeral </title>
+	<form action="" method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+
+		<div class="banner">
+        <h1 class="banner-title">Funeral Form. <br> Please only enter correct and truthful information. </h1>
+       </div>
+
+<div class="container2">
+	  <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Full Mothers Name:</label>
+					{{form.full_mother_name}}
+				</div> </div>
+
+
+	  <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Full Fathers Name:</label>
+					{{form.full_father_name}}
+				</div> </div>
+
+
+	  <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Full Deceased Name:</label>
+					{{form.full_deceased_name}}
+				</div> </div>
+
+
+	  <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Nationality of Deceased:</label>
+					{{form.nationality_of_deceased}}
+				</div> </div>
+
+
+	  <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Deceased Birth Date:</label>
+					{{form.date_of_birth_deceased}}
+				</div> </div>
+
+
+	  <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Deceased Death Date:</label>
+					{{form.date_of_death_deceased}}
+				</div> </div>
+
+
+	  <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Current Address:</label>
+					{{form.address}}
+				</div> </div>
+
+
+	  <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Contact Number:</label>
+					{{form.contact_number}}
+				</div> </div>
+
+
+	  <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Deceased Gender:</label>
+					{{form.gender}}
+				</div> </div>
+
+
+	  <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Death Certificate File:</label>
+					{{form.xerox_copy_death_certificate}}
+				</div> </div>
+
+
+	  <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label></label>
+					{{form.date_created}}
+					<input type="submit" name="Submit">
+				</div> </div>
+
+</div>  </form>
+{% endblock %}

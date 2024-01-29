@@ -1,0 +1,41 @@
+{% load static %}
+
+ <nav class="navbar navbar-expand-lg sticky-top navbar-scroll shadow-0" style="background-color: #23395d;">
+
+  <image alt="logo" width="50" height="50" class="d-inline-block align-text-top" src="{% static 'images/logo.png'%}"> </image>
+   <a class="navbar-brand" href="https://www.facebook.com/photo/?fbid=6634550423292046&set=a.416138401799977"> IFI Aglipay: Aniban 2 Chapel</a>
+
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExample01" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarExample01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link px-3" href="{% url 'Home' %}" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="{% url 'Birth Certificate' %}">Baptism</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="{% url 'Funeral' %}">Funeral</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link px-3" href="{% url 'Marriage' %}">Marriage</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="{% url 'Blessing' %}">Blessing</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link px-3" href="{% url 'Contact Us' %}">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="{% url 'About' %}">About The Chapel</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link px-3" href="{% url 'Status' %}">Check Chapel Schedules</a>
+        </li>
+      </ul>
+
+    </div>
+</nav>

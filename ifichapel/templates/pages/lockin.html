@@ -1,0 +1,29 @@
+{% extends 'pages/index.html' %}
+{% block content %}
+{% load static %}
+<title> Verify Contact Number </title>
+<div class="banner"> <h1 class="banner-title">Verify your phone no. </h1> </div>
+<section class="about-us">
+    <div class="about">
+      <img src="{% static 'images/confirm.png'%}" class="pic2">
+      <div class="text">
+
+          <p>To continue to payment please verify your contact/phone number by entering the code sent to it.</p>
+           <button class="button3">Send Code to Number</button>
+      </div>
+    </div>
+<br>
+<hr>
+
+    <form action="../payment">
+     <div class="about">
+    <div class="text">
+    <label for="con1">Enter code sent to number.</label>
+    <input type="text" id="con1" name="con1" required>
+
+    </div>  <input type="submit" value="Submit"> </div>
+
+    </form> <br> <br> <br> <br>
+
+{% endblock %}
+</section>

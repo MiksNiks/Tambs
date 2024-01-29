@@ -1,0 +1,103 @@
+{% extends 'pages/index.html' %}
+{% block content %}
+{% load static %}
+
+<title> Marriage </title>
+	<form action="" method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+
+		<div class="banner">
+        <h1 class="banner-title">Marriage Form. <br> Please only enter correct and truthful information. </h1>
+       </div>
+
+<div class="container2">
+
+	  <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Full Grooms Name:</label>
+					{{form.full_groom_name}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Full Father Grooms Name:</label>
+					{{form.full_groom_father_name}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Full Mother Grooms Name:</label>
+					{{form.full_groom_mother_name}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Grooms Birthday:</label>
+					{{form.groom_birthday}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Full Bride Name:</label>
+					{{form.full_bride_name}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Full Father Brides Name:</label>
+					{{form.full_bride_father_name}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Full Mother Brides Name:</label>
+					{{form.full_bride_mother_name}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Brides Birthday:</label>
+					{{form.bride_birthday}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Groom Nationality:</label>
+					{{form.groom_nationality}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Brides Nationality:</label>
+					{{form.bride_nationality}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Contact Number:</label>
+					{{form.contact_number}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>License of Marriage File:</label>
+					{{form.xerox_copy_license_marriage}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Baptismal Confirmation File:</label>
+					{{form.xerox_copy_baptismal_confirmation}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label></label>
+					{{form.date_created}}
+					<input type="submit" name="Submit">
+				</div> </div>
+
+
+
+</div>	</form>
+{% endblock %}

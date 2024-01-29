@@ -1,0 +1,118 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block content %}
+
+<title> Chapel Schedules </title>
+
+<div class="banner">
+        <h1 class="banner-title">Baptism Bookings. <br> Total Baptism Bookings: {{total_bookings}} </h1>
+       </div>
+
+<center>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Child's Name</th>
+    <th>Gender</th>
+    <th>Date Created</th>
+    <th>Update</th>
+    <th>Delete</th>
+
+
+  </tr>
+  <tr>
+    {% for baptism in baptism %}
+    <td>{{baptism.id}}</td>
+    <td>{{baptism.full_child_name}}</td>
+    <td>{{baptism.gender}}</td>
+    <td>{{baptism.date_created}}</td>
+    <td><a href = "{% url 'update' baptism.id %}"> click to update </a> </td>
+    <td><a href = "{% url 'delete' baptism.id %}"> click to delete </a> </td>
+  </tr>
+  {% endfor %}
+</table>
+
+  <div class="banner">
+        <h1 class="banner-title">Marriage Bookings. <br> Total Marriage Bookings: {{total_bookings_mar}} </h1>
+       </div>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Groom's Name</th>
+    <th>Bride's Name</th>
+    <th>Date Created</th>
+    <th>Update</th>
+    <th>Delete</th>
+
+
+  </tr>
+  <tr>
+    {% for marriage in marriage %}
+    <td>{{marriage.id}}</td>
+    <td>{{marriage.full_groom_name}}</td>
+    <td>{{marriage.full_bride_name}}</td>
+    <td>{{marriage.date_created}}</td>
+    <td><a href = "{% url 'update2' marriage.id %}"> click to update </a> </td>
+    <td><a href = "{% url 'delete22' marriage.id %}"> click to delete </a> </td>
+  </tr>
+  {% endfor %}
+</table>
+
+   <div class="banner">
+        <h1 class="banner-title">Funeral Bookings. <br> Total Funeral Bookings: {{total_bookings_fur}} </h1>
+       </div>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Deceased Name</th>
+    <th>Gender</th>
+    <th>Date Created</th>
+    <th>Update</th>
+    <th>Delete</th>
+
+
+  </tr>
+  <tr>
+    {% for funeral in funeral %}
+    <td>{{funeral.id}}</td>
+    <td>{{funeral.full_deceased_name}}</td>
+    <td>{{funeral.gender}}</td>
+    <td>{{funeral.date_created}}</td>
+    <td><a href = "{% url 'update3' funeral.id %}"> click to update </a> </td>
+    <td><a href = "{% url 'delete33' funeral.id %}"> click to delete </a> </td>
+  </tr>
+  {% endfor %}
+</table>
+
+  <div class="banner">
+        <h1 class="banner-title">Blessing Bookings. <br> otal Blessing Bookings: {{total_bookings_ble}} </h1>
+       </div>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Blessing Target</th>
+    <th>Date Created</th>
+    <th>Update</th>
+    <th>Delete</th>
+
+
+  </tr>
+  <tr>
+    {% for blessing in blessing %}
+    <td>{{blessing.id}}</td>
+    <td>{{blessing.full_name}}</td>
+    <td>{{blessing.what_to_bless}}</td>
+    <td>{{blessing.date_created}}</td>
+    <td><a href = "{% url 'update4' blessing.id %}"> click to update </a> </td>
+    <td><a href = "{% url 'delete44' blessing.id %}"> click to delete </a> </td>
+  </tr>
+  {% endfor %}
+</table>
+</center>
+
+<br> <br>
+{% endblock %}

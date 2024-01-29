@@ -1,0 +1,42 @@
+{% extends 'pages/index.html' %}
+{% block content %}
+{% load static %}
+
+<title> Contact </title>
+	<form action="" method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+		<div class="banner">
+        <h1 class="banner-title">Contact Us. <br> Please only enter correct and truthful information. </h1>
+       </div>
+
+<div class="container2">
+
+	  <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Full Name:</label>
+					{{form.full_name}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Concern:</label>
+					{{form.concern_type}}
+				</div> </div>
+
+	 <div class="col-md-6 col-sm-12">
+				<div class="styled-input">
+					<label>Contact Number:</label>
+					{{form.contact_number}}
+				</div> </div>
+
+	<div class="col-md-6 col-sm-12">
+				<div class="styled-input chonky">
+					<label>Message:</label>
+					{{form.message}}
+					<br> <br>
+					<input type="submit" name="Submit">
+				</div> </div>
+</div>
+		<br> <br> <br> <br> <br>
+</form>
+{% endblock %}

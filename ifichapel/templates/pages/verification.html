@@ -1,0 +1,25 @@
+{% extends 'pages/index.html' %}
+{% block content %}
+{% load static %}
+<title> Verify Identity </title>
+<div class="banner"> <h1 class="banner-title">Verify your identity. </h1> </div>
+<section class="about-us">
+    <div class="about">
+      <img src="{% static 'images/confirm.png'%}" class="pic2">
+      <div class="text">
+
+          <p>To save the edit done please type below the code sent to the phone number associated with the schdule.</p>
+      </div>
+    </div>
+
+<hr>
+    <form action="../home">
+    <div class="about">
+        <div class="text">
+    <label for="con">Enter below</label>
+    <input type="text" id="con" name="con" required>
+      </div>  <input type="submit" value="Submit"> </div>
+    </form> <br> <br> <br> <br> <br>
+
+{% endblock %}
+</section>
